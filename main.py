@@ -1,46 +1,54 @@
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from schema import Base, Item, Container, Inventory, Player, items_association_table
+from sqlalchemy.orm import sessionmaker
+from schema import Base, Entity, Item, Container, Character, Player
 
-
+# Create the engine and bind it to the Base class
 engine = create_engine('sqlite:///game.db')
 Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
 
-Base.metadata.create_all(engine)
+# Create the session
+Session = sessionmaker(bind=engine)
+session = Session()
 
-# Create entities
-player = Player(
-    character_name='John',
-    player_name='John Player',
-    player_stats={},
-    player_level=1,
-    player_experience=0,
-    player_properties={}
-)
+# Create some entities
+entity1 = Entity(description="Entity 1", properties={"color": "red"})
+entity2 = Entity(description="Entity 2", properties={"color": "blue"})
 
-inventory = Inventory(inventory_name='Backpack', inventory_capacity=10, inventory_value=0)
+# Create some items
+item1 = Item(item_name="Sword", item_description="A powerful sword", item_value=100)
+item2 = Item(item_name="Shield", item_description="A sturdy shield", item_value=50)
 
-# Add the player to the inventory
-item1 = Item(item_name='Sword', item_description='A powerful sword')
-inventory.items.append(item1)
+# Create a container
+container = Container(owner_id=1, container_name="Chest", container_capacity=10)
 
-# Add the item to the container
-item1.containers.append(inventory)
+# Create a character
+character = Character(character_id=1, inventory_id=1, type="Warrior", race="Human", stats={"strength": 10})
 
-session.add_all([player, inventory, item1])
+# Create a player
+player = Player(character_id=1, inventory_id=1, player_id=1, name="John", level=5)
+
+# Add the entities, items, container, character, and player to the session
+session.add_all([entity1, entity2, item1, item2, container, character, player])
 session.commit()
 
-# Retrieve the player and their inventory
-player = session.query(Player).first()
-inventory = session.query(Inventory).first()
+# Query the entities
+entities = session.query(Entity).all()
+for entity in entities:
+    print(entity)
 
-print("Player:")
-print(player)
-
-print("Inventory:")
-print(inventory)
-print("Items in Inventory:")
-for item in inventory.items:
+# Query the items
+items = session.query(Item).all()
+for item in items:
     print(item)
+
+# Query the container
+container = session.query(Container).first()
+print(container)
+
+# Query the character
+character = session.query(Character).first()
+print(character)
+
+# Query the player
+player = session.query(Player).first()
+print(player)
