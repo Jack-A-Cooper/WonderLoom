@@ -2,5 +2,5 @@
 
 Contributors:
 
-Jack Cooper\n
+Jack Cooper
 Ethan Pike
