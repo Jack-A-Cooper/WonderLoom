@@ -23,7 +23,7 @@ def initialize_database():
         if prompt.lower() == 'y':
             refresh_database()
         else:
-            exit()
+            define_table_names()
     else:
         define_table_names()
 

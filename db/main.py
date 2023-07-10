@@ -40,36 +40,52 @@ def test_entity():
 def test_character():
     print("========== Testing Character Class ==========")
 
-    # Create a new character
-    new_character = Character(name='Character Name', description='I am a character!',
-                              inventory={}, equipment={}, relations={}, stats={}, properties={})
-    database.add_character(new_character)
-    print("Added character:", new_character.name, new_character.description,
-          new_character.inventory, new_character.equipment, new_character.relations,
-          new_character.stats, new_character.properties)
+    # Create new characters
+    characters = [
+        Character(character_id=1, name={'first_name': 'Adam', 'last_name': 'Stone'}, description='I am a character!',
+                  inventory={}, equipment={}, relations={}, statistics={}, properties={}, type='npc'),
+        Character(character_id=2, name={'first_name': 'Emily', 'last_name': 'Smith'}, description='I am another character!',
+                  inventory={}, equipment={}, relations={}, statistics={}, properties={}, type='npc'),
+        Character(character_id=3, name={'first_name': 'John', 'last_name': 'Doe'}, description='I am yet another character!',
+                  inventory={}, equipment={}, relations={}, statistics={}, properties={}, type='npc')
+    ]
+
+    # Add characters to the database
+    for character in characters:
+        database.add_character(character)
+        print("Added character:", character.character_id, character.name, character.description,
+              character.inventory, character.equipment, character.relations,
+              character.statistics, character.properties)
 
     # Query all characters
     characters = database.get_all_characters()
     for character in characters:
-        print(character.name, character.description)
+        print(character.character_id)
+        print(character.name)
+        print(character.description)
         print(character.inventory)
         print(character.equipment)
         print(character.relations)
-        print(character.stats)
+        print(character.statistics)
         print(character.properties)
 
     # Update a character
     character = characters[0]
+    character.character_id = 7
     character.description = 'Updated description'
     character.inventory = {'item': 'Sword'}
     character.equipment = {'armor': 'Shield'}
     character.relations = {'friend': 'NPC'}
-    character.stats = {'strength': 10, 'agility': 8}
+    character.statistics = {'strength': 10, 'agility': 8}
     character.properties = {'alignment': 'Good'}
+    character.type = 'player'
     database.update_character(character)
-    print("Updated character:", character.name, character.description,
+    print("Updated character:", character.character_id, character.name, character.description,
           character.inventory, character.equipment, character.relations,
-          character.stats, character.properties)
+          character.statistics, character.properties)
+
+    # Print characters table
+    database.print_table('characters')
 
     # Delete a character
     character = characters[0]
