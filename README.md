@@ -1,13 +1,13 @@
 # SentientScript
 
-##Created By:
+## Created By:
 <p>1. Jack Cooper - Code, System Design, Maintainence, and Overall Development <br> 2. Ethan Pike - Design, Testing, and Analysis </p>
 
-###Project Description: Game Data Capture and AI Integration
+### Project Description: Game Data Capture and AI Integration
 
 <p>This project provides a comprehensive solution for capturing custom data in games and storing it in a database. It aims to facilitate the interaction between games and AI Language Models, such as ChatGPT, by leveraging a digital program to save game states. The project offers modularity, allowing developers to customize and adapt it to fit the specific limitations, needs, and desires of their games.</p>
 
-<h2>Key Features:</h2>
+## Key Features:
 
 1. Custom Data Capture: The project enables the capture of game-specific data, allowing developers to define and store custom information in a database. This flexibility ensures that the captured data aligns with the unique requirements of each game.
 
