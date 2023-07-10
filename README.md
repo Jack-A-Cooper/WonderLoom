@@ -1,5 +1,5 @@
 # Wonderloom
-![Alt Text](wl.png)
+![Alt Text](util/wl.png)
 ## Created By:
 <p>1. Jack Cooper - Code, Systems Design, and Development <br> 2. Ethan Pike - Design, Testing, and Analysis </p>
 
@@ -16,7 +16,7 @@ Crafting compelling story arcs is a cornerstone of text-based play and homebrewe
 
 We embark on this exciting journey as we hope to knit possibilities and stitch worlds - a thread at a time.
 
-![Alt Text](w2.png)
+![Alt Text](util/w2.png)
 
 ## Dynamic Content Generation and Context Preservation Challenges in Text Games:
 
@@ -31,7 +31,7 @@ Logical coherence is vital in creating a cohesive narrative. We recognize the ne
 - Long-Term Story Arc Management:
 Text-based games often feature intricate storylines that evolve over multiple sessions or interactions. Our project tackles the challenge of managing long-term story arcs by leveraging PostgreSQL's capabilities as a reliable and scalable database solution. We can capture and store critical plot points, player choices, and significant events, enabling the AI agent to reference and build upon this historical data. By keeping a comprehensive record of the game's progression, we facilitate the generation of coherent narratives across multiple gameplay sessions, ensuring a consistent and immersive story experience.
 
-![Alt Text](w3.png)
+![Alt Text](util/w3.png)
 
 ## Key Features:
 
@@ -47,7 +47,7 @@ Text-based games often feature intricate storylines that evolve over multiple se
 
 By combining the ability to capture custom game data, interact with AI Language Models, and offer modularity for flexibility, Wonderloom hopes to provide a powerful toolset for users to create immersive and dynamic game experiences all while effectively tracking and managing game-related data with the support of modern technologies.
 
-![Alt Text](w4.png)
+![Alt Text](util/w4.png)
 
 #### Current State:
 
