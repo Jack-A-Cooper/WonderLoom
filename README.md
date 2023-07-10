@@ -16,6 +16,8 @@ Crafting compelling story arcs is a cornerstone of text-based play and homebrewe
 
 We embark on this exciting journey as we hope to knit possibilities and stitch worlds - a thread at a time.
 
+![Alt Text](w2.png)
+
 ## Dynamic Content Generation and Context Preservation Challenges in Text Games:
 
 One of the most fascinating aspects of AI language models, such as ChatGPT, is their ability to generate dynamic content and create immersive storytelling experiences in text-based games. However, preserving context and maintaining a coherent narrative pose significant challenges. In our project, we address these challenges by leveraging the power of Python, PostgreSQL, and modern frameworks. We start by addressing the points brought up earlier:
@@ -28,6 +30,8 @@ Logical coherence is vital in creating a cohesive narrative. We recognize the ne
 
 - Long-Term Story Arc Management:
 Text-based games often feature intricate storylines that evolve over multiple sessions or interactions. Our project tackles the challenge of managing long-term story arcs by leveraging PostgreSQL's capabilities as a reliable and scalable database solution. We can capture and store critical plot points, player choices, and significant events, enabling the AI agent to reference and build upon this historical data. By keeping a comprehensive record of the game's progression, we facilitate the generation of coherent narratives across multiple gameplay sessions, ensuring a consistent and immersive story experience.
+
+![Alt Text](w3.png)
 
 ## Key Features:
 
@@ -42,6 +46,8 @@ Text-based games often feature intricate storylines that evolve over multiple se
 5. Modular Design (In Development): The project follows a modular architecture, enabling developers to easily modify and extend its functionality. This flexibility ensures that the system can adapt to various game limitations, requirements, and preferences. Developers can selectively integrate specific modules or build upon the existing ones to create a tailored solution.
 
 By combining the ability to capture custom game data, interact with AI Language Models, and offer modularity for flexibility, Wonderloom hopes to provide a powerful toolset for users to create immersive and dynamic game experiences all while effectively tracking and managing game-related data with the support of modern technologies.
+
+![Alt Text](w4.png)
 
 #### Current State:
 
