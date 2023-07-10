@@ -1,5 +1,5 @@
 # SentientScript
-![Alt Text]([https://example.com/image.jpg](https://github.com/Jack-A-Cooper/SentientScript/blob/main/sstxt.png))
+![Alt Text](sstxt.png))
 ## Created By:
 <p>1. Jack Cooper - Code, System Design, Documentation, Maintainence, and Overall Development <br> 2. Ethan Pike - Design, Testing, and Analysis </p>
 
