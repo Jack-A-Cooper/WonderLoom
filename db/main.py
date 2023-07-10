@@ -1,28 +1,28 @@
-from models import User
+from models import Character
 import database
 
 def main():
     database.initialize_database()
 
-    # Create a new user
-    new_user = User(name='John Doe', email='john.doe@example.com')
-    database.add_user(new_user)
+    # CHARACTER
+    
+    # Create a new chracter
+    new_character = Character(name='Character Name', desc='I am a description!')
+    database.add_character(new_character)
 
-    # Query all users
-    users = database.get_all_users()
-    for user in users:
-        print(user.name, user.email)
+    # Query all characters
+    characters = database.get_all_characters()
+    for character in characters:
+        print(character.name, character.desc)
 
-    # Update a user
-    user = users[0]
-    user.email = 'new-email@example.com'
-    database.update_user(user)
+    # Update a character
+    character = characters[0]
+    character.desc = 'my_desc'
+    database.update_character(character)
 
-    # Delete a user
-    user = users[0]
-    database.delete_user(user)
-
-    database.close_session()
-
+    # Delete a character
+    character = characters[0]
+    database.delete_character(character)
+    
 if __name__ == '__main__':
     main()
