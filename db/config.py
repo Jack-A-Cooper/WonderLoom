@@ -1,1 +1,1 @@
-DATABASE_URL = 'postgresql://admin:riddim69@localhost:5432/game'
+DATABASE_URL = 'postgresql://admin:pass@localhost:5432/db'
