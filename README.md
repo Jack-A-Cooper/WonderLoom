@@ -1,7 +1,7 @@
 # Wonderloom
 ![Alt Text](sstxt.png)
 ## Created By:
-<p>1. Jack Cooper - Code, System Design, Documentation, Maintainence, and Overall Development <br> 2. Ethan Pike - Design, Testing, and Analysis </p>
+<p>1. Jack Cooper - Code, Systems Design, and Development <br> 2. Ethan Pike - Design, Testing, and Analysis </p>
 
 ## Project Description: Wonderloom
 
