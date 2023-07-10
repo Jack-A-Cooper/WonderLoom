@@ -1,5 +1,5 @@
 # Wonderloom
-![Alt Text](util/wll.png)
+![Alt Text](util/wl1.png)
 ## Created By:
 <p>1. Jack Cooper - Code, Systems Design, and Development <br> 2. Ethan Pike - Design, Testing, and Analysis </p>
 
