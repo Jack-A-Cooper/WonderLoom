@@ -11,7 +11,7 @@
 
 1. Custom Data Capture (In Development): The project enables the capture of game-specific data, allowing developers to define and store custom information in a database. This flexibility ensures that the captured data aligns with the unique requirements of each game.
 
-2.The Ability to host a server and enable multiple users to simultaneously interact with the program and its associated database. With this feature, users will have the opportunity to deploy their own server, fostering collaborative interactions and expanding the program's reach. The enhanced functionality allows for seamless communication and data sharing among multiple users, promoting a dynamic and interactive experience.
+2. The Ability to host a server and enable multiple users to simultaneously interact with the program and its associated database. With this feature, users will have the opportunity to deploy their own server, fostering collaborative interactions and expanding the program's reach. The enhanced functionality allows for seamless communication and data sharing among multiple users, promoting a dynamic and interactive experience.
 
 3. AI Language Model Integration (Planned): By integrating with AI Language Models like ChatGPT, the project facilitates the seamless interaction between games and advanced natural language processing capabilities. This integration opens up possibilities for enhanced game experiences, intelligent conversations, and dynamic storytelling.
 
