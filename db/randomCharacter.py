@@ -521,6 +521,5 @@ print(new_json_str)
 
 
 '''
-NOTE: Equipment generation needs to be fixed to put equipment into the correct slot! - BUG (e.g., "Gloves on feet!")
 NOTE: Description generation is currently bugged
 '''
