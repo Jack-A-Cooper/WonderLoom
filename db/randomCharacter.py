@@ -38,7 +38,6 @@ def explore_json_fields(json_data, category, field_dict=None, prefix=''):
                 explore_json_fields(item, category, field_dict, prefix=f"{prefix}{index}.")
     return field_dict
 
-
 def print_json_fields(field_dict):
     for field, value in field_dict.items():
         print(f"{field}: {value}")
@@ -226,9 +225,26 @@ character.name['name'] = character.name['full_name']
 
 
 # ========== Description Generation ========== #
+'''
+subfields = list(data["descriptions"][0].keys())
+print(subfields)
+current_selection = {
+    descriptions: {list(data["descriptions"][0].keys())}
+}
+print(current_selection)
+find_subfield(data, "descriptions")
+description_theme = random.choice(subfields)
+print(description_theme)
+selected_slot = data["descriptions"][0]
+selected_theme = random.choice(selected_slot)
+current_selection = {
+    selected_theme: selected_slot
+}
+random_selection = current_selection[selected_theme]
+character.description = random.choice(random_selection)
 
 character.description = "debug"
-'''
+
 # Extract the subfields dynamically - use key: "descriptions"
 subfields = list(data["descriptions"][0].keys())
 
@@ -244,13 +260,13 @@ current_selection = {
 }
 
 # Access the 'descriptions' key in the new JSON object
-descriptions_list = current_selection[selected_theme]["descriptions"]
+descriptions_list = current_selection[selected_theme]['descriptions']
 
 # Set character's last name with random choice from the randomly chosen last names list by theme
 character.description = random.choice(descriptions_list)
-
+'''
 # ========== Equipment Generation ========== #
-
+'''
 equipment = explore_json_fields(json_data, "equipment")
 
 for slot, items in equipment.items():
@@ -279,7 +295,7 @@ for _ in range(num_names):
 
     # Create a new JSON object called first_names_current_selection with the extracted subfield - first_names from original data parse
     first_names_current_selection = {
-    selected_theme: first_names
+        selected_theme: first_names
     }
 
     # Access the 'first_names' key in the new JSON object
@@ -296,7 +312,7 @@ for _ in range(num_names):
 
     # Create a new JSON object called last_names_current_selection with the extracted subfield - last_names from original data parse
     last_names_current_selection = {
-    selected_theme: last_names
+        selected_theme: last_names
     }
 
     # Access the 'last_names' key in the new JSON object
@@ -342,136 +358,74 @@ character.properties = random.sample(rpg_properties, num_properties)
 
 # ========== Head Slot Generation ========== #
 
-# Extract the subfields dynamically - use key: "equipment"
 subfields = list(data["equipment"][0].keys())
-
-find_subfield(data, "equipment")
-
-# Randomly select a subfield
-selected_theme = random.choice(subfields)
-
-# Extract the selected subfield
-equipment_slot = data["equipment"][0][selected_theme]
-
-# Create a new JSON object called current_selection with the extracted subfield - head from original data parse
+find_subfield(data, "Head")
+selected_slot = data["equipment"][0]["Head"]
+selected_theme = random.choice(selected_slot)
 current_selection = {
-    selected_theme: equipment_slot
+    selected_theme: selected_slot
 }
-
-# Access the 'head' key in the new JSON object
 random_selection = current_selection[selected_theme]
-
-# Set character's equipment slot with a random choice from the randomly chosen list by theme
 character.equipment['head'] = random.choice(random_selection)
 
 # ========== Body Slot Generation ========== #
 
-# Extract the subfields dynamically - use key: "equipment"
 subfields = list(data["equipment"][0].keys())
-
-# Randomly select a subfield
-selected_theme = random.choice(subfields)
-
-# Extract the selected subfield
-equipment_slot = data["equipment"][0][selected_theme]
-
-# Create a new JSON object called current_selection with the extracted subfield - body from original data parse
+find_subfield(data, "Body")
+selected_slot = data["equipment"][0]["Body"]
+selected_theme = random.choice(selected_slot)
 current_selection = {
-    selected_theme: equipment_slot
+    selected_theme: selected_slot
 }
-
-# Access the 'body' key in the new JSON object
 random_selection = current_selection[selected_theme]
-
-# Set character's equipment slot with a random choice from the randomly chosen list by theme
 character.equipment['body'] = random.choice(random_selection)
 
 # ========== Hands Slot Generation ========== #
 
-# Extract the subfields dynamically - use key: "equipment"
 subfields = list(data["equipment"][0].keys())
-
-# Randomly select a subfield
-selected_theme = random.choice(subfields)
-
-# Extract the selected subfield
-equipment_slot = data["equipment"][0][selected_theme]
-
-# Create a new JSON object called current_selection with the extracted subfield - hands from original data parse
+find_subfield(data, "Hands")
+selected_slot = data["equipment"][0]["Hands"]
+selected_theme = random.choice(selected_slot)
 current_selection = {
-    selected_theme: equipment_slot
+    selected_theme: selected_slot
 }
-
-# Access the 'hands' key in the new JSON object
 random_selection = current_selection[selected_theme]
-
-# Set character's equipment slot with a random choice from the randomly chosen list by theme
 character.equipment['hands'] = random.choice(random_selection)
 
 # ========== Right Hand Slot Generation ========== #
 
-# Extract the subfields dynamically - use key: "equipment"
 subfields = list(data["equipment"][0].keys())
-
-# Randomly select a subfield
-selected_theme = random.choice(subfields)
-
-# Extract the selected subfield
-equipment_slot = data["equipment"][0][selected_theme]
-
-# Create a new JSON object called current_selection with the extracted subfield - right_hand from original data parse
+find_subfield(data, "Right Hand")
+selected_slot = data["equipment"][0]["Right Hand"]
+selected_theme = random.choice(selected_slot)
 current_selection = {
-    selected_theme: equipment_slot
+    selected_theme: selected_slot
 }
-
-# Access the 'right_hand' key in the new JSON object
 random_selection = current_selection[selected_theme]
-
-# Set character's equipment slot with a random choice from the randomly chosen list by theme
 character.equipment['right_hand'] = random.choice(random_selection)
 
 # ========== Left Hand Slot Generation ========== #
 
-# Extract the subfields dynamically - use key: "equipment"
 subfields = list(data["equipment"][0].keys())
-
-# Randomly select a subfield
-selected_theme = random.choice(subfields)
-
-# Extract the selected subfield
-equipment_slot = data["equipment"][0][selected_theme]
-
-# Create a new JSON object called current_selection with the extracted subfield - left_hand from original data parse
+find_subfield(data, "Left Hand")
+selected_slot = data["equipment"][0]["Left Hand"]
+selected_theme = random.choice(selected_slot)
 current_selection = {
-    selected_theme: equipment_slot
+    selected_theme: selected_slot
 }
-
-# Access the 'left_hand' key in the new JSON object
 random_selection = current_selection[selected_theme]
-
-# Set character's equipment slot with a random choice from the randomly chosen list by theme
 character.equipment['left_hand'] = random.choice(random_selection)
 
 # ========== Feet Slot Generation ========== #
 
-# Extract the subfields dynamically - use key: "equipment"
 subfields = list(data["equipment"][0].keys())
-
-# Randomly select a subfield
-selected_theme = random.choice(subfields)
-
-# Extract the selected subfield
-equipment_slot = data["equipment"][0][selected_theme]
-
-# Create a new JSON object called current_selection with the extracted subfield - feet from original data parse
+find_subfield(data, "Feet")
+selected_slot = data["equipment"][0]["Feet"]
+selected_theme = random.choice(selected_slot)
 current_selection = {
-    selected_theme: equipment_slot
+    selected_theme: selected_slot
 }
-
-# Access the 'feet' key in the new JSON object
 random_selection = current_selection[selected_theme]
-
-# Set character's equipment slot with a random choice from the randomly chosen list by theme
 character.equipment['feet'] = random.choice(random_selection)
 
 # ========== Inventory Generation ========== #
