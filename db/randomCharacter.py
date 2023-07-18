@@ -139,6 +139,9 @@ def randomize_character_equipment(json_data, type_of_category, character_field_t
     # Replace the second occurrence in the previous response with replacement2
     character.equipment[equipment_slot] = random.choice()
 
+def getCharacter():
+    return character
+
 # ========== Random Character Generation From JSON ========== #
 
 # Read the json file and convert it to a json object
@@ -464,6 +467,8 @@ print(f"Properties: {character.properties if character.properties else 'No prope
 print(f"Inventory: {character.inventory if character.inventory else 'No inventory'}")
 
 # ========== DEBUG ========== #
+
+print(getCharacter())
 
 '''
 # Specify the category to find
