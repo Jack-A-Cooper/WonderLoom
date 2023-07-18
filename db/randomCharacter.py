@@ -265,15 +265,6 @@ descriptions_list = current_selection[selected_theme]['descriptions']
 # Set character's last name with random choice from the randomly chosen last names list by theme
 character.description = random.choice(descriptions_list)
 '''
-# ========== Equipment Generation ========== #
-'''
-equipment = explore_json_fields(json_data, "equipment")
-
-for slot, items in equipment.items():
-    if isinstance(items, list) and items:
-        item = random.choice(items)
-        character.equipment[slot] = item
-'''
 # ========== Relationship Generation ========== #
 
 relationships = []
